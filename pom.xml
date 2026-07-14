@@ -52,7 +52,7 @@
         <repository>
             <id>github</id>
             <name>Ponko Starter GitHub Packages</name>
-            <url>https://maven.pkg.github.com/https://github.com/eskapkozy/ponko-platform-starter</url>
+            <url>https://maven.pkg.github.com/eskapkozy/ponko-platform-starter</url>
         </repository>
     </distributionManagement>
 
