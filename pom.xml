@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.5.16</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>com.ponko.starter</groupId>
+    <artifactId>ponko-platform-starter</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>Ponko Platform Starter</name>
+    <description>Librairies internes partagées (cloud, core, data, messaging, resilience, security, observability) pour les microservices Ponko</description>
+
+    <properties>
+        <java.version>21</java.version>
+        <spring-cloud.version>2025.0.3</spring-cloud.version>
+    </properties>
+
+    <modules>
+        <module>cloud</module>
+        <module>core</module>
+        <module>data</module>
+        <module>messaging</module>
+        <module>resilience</module>
+        <module>security</module>
+        <module>observability</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>Ponko Starter GitHub Packages</name>
+            <url>https://maven.pkg.github.com/https://github.com/eskapkozy/ponko-platform-starter</url>
+        </repository>
+    </distributionManagement>
+
+</project>

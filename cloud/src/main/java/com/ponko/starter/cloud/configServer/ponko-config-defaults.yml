@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config-server   # résolution via Eureka, pas d'URL en dur
+      fail-fast: true
+      retry:
+        max-attempts: 6
+        initial-interval: 1000
+        multiplier: 1.5
